@@ -41,9 +41,11 @@ print(f2(a))    # Should print 22
 # Note: Google "python default arguments" for a hint.
 
 # YOUR CODE HERE
-def f4(arg1, *argv):
-    #TODO
-    pass
+def f3(num1, num2 = ''):
+    if num2 == '':
+        return num1 + 1
+    else:
+        return num1 + num2
 
 print(f3(1, 2))  # Should print 3
 print(f3(8))     # Should print 9
@@ -59,8 +61,12 @@ print(f3(8))     # Should print 9
 
 # YOUR CODE HERE
 def f4(**kwargs):
-    for x in kwargs:
-        print("key: {}, value: {}".format(x, kwargs[x]))
+    if type(kwargs[0]) == dict:
+        for dic in kwargs[0]
+        print("key: {}, value: {}".format(dic, kwargs[0][x]))
+    else:
+        for x in kwargs:
+            print("key: {}, value: {}".format(x, kwargs[x]))
 
 # Should print
 # key: a, value: 12
@@ -79,4 +85,4 @@ d = {
 }
 
 # How do you have to modify the f4 call below to make this work?
-f4(d) #TODO
+f4(d)
